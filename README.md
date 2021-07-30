@@ -4,17 +4,16 @@
 
 Created a service using Docker and Python, that satisfies the following requirements:
 
-1. Through remote service API calls,
-a. The users can post integers to the service.
-b. The users can get the number of times a specific value was posted.
-c. Users can post/get values/amounts of other types (e.g., float, string) / any type.
+* Through remote service API calls:
+   * The users can post integers to the service.
+   * The users can get the number of times a specific value was posted.
+   * Users can post/get values/amounts of other types (e.g., float, string) / any type.
 
-2. The service stores the values:
-a. In memory
+* The service stores the values in memory
 
-3. Through remote service API calls,
-a. Users can request the average of all stored integers.
-b. Users can request the average of values with a specific type (e.g. float/int).
+* Through remote service API calls:
+   * Users can request the average of all stored integers.
+   *  Users can request the average of values with a specific type (e.g. float/int).
 
 
 ## Command to run this repo locally
