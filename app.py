@@ -7,12 +7,14 @@ from bson import json_util
 from flask_pymongo import PyMongo
 from pymongo import message
 from flask_caching import Cache
+import os
 
 
 app = Flask(__name__)
 app.config['MONGO_DBNAME'] = 'restdb'
-#app.config['MONGO_URI'] = 'mongodb://localhost:27017/restdb'
 app.config['MONGO_URI'] = 'mongodb://test_mongodb:27017/restdb'
+if os.environ.get('GITHUB_WORKFLOW'):
+    app.config['MONGO_URI'] = 'mongodb://localhost:27017/restdb'
 app.testing = True
 cache = Cache(config={'CACHE_TYPE': 'SimpleCache'})
 cache.init_app(app)
