@@ -1,0 +1,37 @@
+name: Python Continental
+
+on:
+  push:
+    branches:
+      - main
+  
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  runner-job:
+    runs-on: ubuntu-latest
+
+    services:
+      mongodb:
+        image: mongo
+        hostname: test_mongodb
+        ports:
+          - 27017:27017
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pytest
+        run: pytest -s -v
+        

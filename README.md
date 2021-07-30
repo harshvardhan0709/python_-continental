@@ -1,6 +1,6 @@
 ![](https://github.com/harshvardhan0709/python_continental/workflows/Python%20Continental/badge.svg)
 
-# Python Continental
+# Docker + Python service
 
 Created a service using Docker and Python, that satisfies the following requirements:
 
@@ -17,9 +17,8 @@ a. Users can request the average of all stored integers.
 b. Users can request the average of values with a specific type (e.g. float/int).
 
 
-## Running Python Continental Repo Locally
+## Command to run this repo locally
 
-Command:
 
  ```bash
  git clone https://github.com/harshvardhan0709/python_continental.git
