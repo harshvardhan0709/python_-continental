@@ -1,9 +1,10 @@
 version: "3.8"
 
 services:
-    test_mongodb:
+    mongodb:
         image: mongo
-        container_name: test_mongodb
+        hostname: test_mongodb
+        container_name: mongodb
         ports:
           - 27017:27017
         volumes:

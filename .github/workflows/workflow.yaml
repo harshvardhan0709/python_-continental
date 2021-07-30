@@ -14,9 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      mongodb:
+      test_mongodb:
         image: mongo
-        hostname: test_mongodb
         ports:
           - 27017:27017
 
