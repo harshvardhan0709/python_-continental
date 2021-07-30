@@ -15,6 +15,14 @@ def test_index():
 def test_sensor_data_post():
     client = app.test_client()
     res = client.post('/sensor',
+        data=json.dumps({'sensor_data': 13.2389}),
+        content_type='application/json',
+    )
+    res = client.post('/sensor',
+        data=json.dumps({'sensor_data': "15"}),
+        content_type='application/json',
+    )
+    res = client.post('/sensor',
         data=json.dumps({'sensor_data': 15}),
         content_type='application/json',
     )
